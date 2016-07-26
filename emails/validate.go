@@ -1,3 +1,4 @@
+// Package emails provides validations for emails.
 package emails
 
 import (
@@ -5,7 +6,10 @@ import (
 	"strings"
 )
 
+// Validate validates email.
+// If email is valid, this returns nil.
 func Validate(email string) error {
+	// TODO: improve.
 	l := len(email)
 
 	if l == 0 {
