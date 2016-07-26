@@ -32,7 +32,7 @@ func Validate(email string) error {
 	i = strings.Index(email, ".")
 	switch {
 	case i < 0:
-		return errors.New(`"." must be in email`)
+		return errors.New(`email must have some "."`)
 	case i == 0, i+1 == l, email[l-1] == '.':
 		return errors.New(`email cannot start or end with "."`)
 	}
