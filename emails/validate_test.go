@@ -45,3 +45,11 @@ func TestValidateInvalids(t *testing.T) {
 		}
 	}
 }
+
+var benchLong = strings.Repeat("a", 65) + "@" + strings.Repeat("b", 100) + ".com"
+
+func BenchmarkValidate(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Validate(benchLong)
+	}
+}
