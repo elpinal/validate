@@ -13,7 +13,7 @@ var (
 // If password is valid, this returns nil.
 // In a default setting, minimum length is 8, maximum length is 128, and allowed code points are in the range [33, 126].
 func Validate(password string) error {
-	// TODO: Support specifying settings.
+	// TODO: Accept user's preference.
 	switch l := len(password); {
 	case l < 8:
 		return errShort
