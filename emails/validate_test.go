@@ -29,6 +29,8 @@ var invalids = []struct {
 	{""},
 	{"@"},
 	{".@.com"},
+	{"a@com."},
+	{"a@com@"},
 	{"aaa.@example.com"},
 	{"aaa bbb@example.com"},
 	{"aaa..bbb..ccc@example.com"},

@@ -36,7 +36,7 @@ func Validate(email string) error {
 	switch {
 	case i < 0:
 		return errNoAt
-	case i == 0, i+1 == l, email[l-1] == '@':
+	case i == 0, i+1 == l:
 		return errAt
 	case i > 64:
 		return errLongLocal
@@ -46,7 +46,7 @@ func Validate(email string) error {
 	switch {
 	case i < 0:
 		return errNoDot
-	case i == 0, i+1 == l, email[l-1] == '.':
+	case i == 0, i+1 == l:
 		return errDot
 	}
 
