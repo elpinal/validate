@@ -20,7 +20,6 @@ func Validate(password string) error {
 	case l > 128:
 		return errLong
 	}
-
 	for _, s := range password {
 		if s < 33 || 126 < s {
 			return errIllegalChar
