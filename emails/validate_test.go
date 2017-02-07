@@ -12,7 +12,7 @@ var valids = []struct {
 	{"aaa+bbb@example.com"},
 	{"AAABBB@example.com"},
 	{"aaa.bbb.ccc@example.com"},
-	{strings.Repeat("a", 64) + "@" + strings.Repeat("b", 254-69) + ".com"},
+	{strings.Repeat("a", 64) + "@" + strings.Repeat("b", 254-69) + ".com"}, // TODO: avoid using magic numbers
 }
 
 func TestValidateValids(t *testing.T) {
